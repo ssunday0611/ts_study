@@ -21,6 +21,7 @@ class Circle implements Shape{
         this.radius = radius;
     }
 
+    //너비 구하는 공힉
     getArea(){
         return this.radius * this.radius * Math.PI;
     }
