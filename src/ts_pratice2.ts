@@ -7,21 +7,22 @@
 // Shape라는 interface 설정
 interface Shape {
     getArea(): number;
-    // Shapge interface에는 getArea라는 함수가 꼭 있어야함
+    // Shape interface에는 getArea라는 함수가 꼭 있어야함
     // 반환값은 숫자
 }
 
 class Circle implements Shape{
     // implements키워드를 이용해 해당 클래스가 Shape interface의 조건을 충족하겟다고 명시
 
-    radius: number;
+    // radius: number;
     // 멤버 변수 radius 값 설정.
 
-    constructor(radius: number){
+    // public accessor은 특정 값이 클래스 밖에서도 조회 가능하다.
+    constructor(public radius: number){
         this.radius = radius;
     }
 
-    //너비 구하는 공힉
+    //너비 구하는 공식
     getArea(){
         return this.radius * this.radius * Math.PI;
     }
